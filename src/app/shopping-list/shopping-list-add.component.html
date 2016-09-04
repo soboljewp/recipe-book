@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <form id="shopping-list-add" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+    <form id="shopping-list-add" (ngSubmit)="onSubmit(f.value); f.reset()" #f="ngForm">
       <div class="row">
         <div class="col-sm-5 form-group">
           <label for="item-name">Name</label>
