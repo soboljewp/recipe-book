@@ -12,7 +12,9 @@ export class RecipeService {
     new Recipe('Salat', 'mit frischen Tomaten', 'http://piccobello-pizza.de/wp-content/uploads/2015/11/Gemischter-Salat.jpg', [])
   ];
 
-  constructor() { }
+  constructor() {
+    console.log("RecipeService constructor " + this.recipes);
+  }
 
   getRecipes() {
     return this.recipes;
@@ -24,5 +26,13 @@ export class RecipeService {
 
   deleteRecipe(recipe: Recipe) {
     this.recipes.splice(this.recipes.indexOf(recipe), 1);
+  }
+
+  addRecipe(newRecipe: Recipe) {
+    this.recipes.push(newRecipe);
+  }
+
+  editRecipe(oldRecipe: Recipe, newRecipe: Recipe) {
+    this.recipes[this.recipes.indexOf(oldRecipe)] = newRecipe;
   }
 }

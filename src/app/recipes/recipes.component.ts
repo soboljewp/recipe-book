@@ -6,7 +6,6 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
 @Component({
   selector: 'rb-recipes',
   templateUrl: 'recipes.component.html',
-  providers: [RecipeService],
   directives: [ROUTER_DIRECTIVES]
 })
 export class RecipesComponent {
